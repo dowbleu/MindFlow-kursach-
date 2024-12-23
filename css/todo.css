@@ -127,14 +127,14 @@ body {
     gap: 5px;
 }
 
+.user-info:hover .user-icon {
+    transform: rotate(360deg);
+}
+
 .user-icon {
     width: 20px;
     height: 20px;
-    transition: transform 0.3s ease;
-}
-
-.user-icon:hover {
-    transform: rotate(360deg);
+    transition: transform 0.4s ease;
 }
 
 .username {
@@ -287,6 +287,9 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     margin: 10px;
+    word-break: break-all;
+    gap: 10px;
+    flex-direction: column;
 }
 
 .todo-today:hover {
@@ -298,6 +301,7 @@ body {
     font-size: 1.4rem;
     margin: 0;
     color: var(--main-text-color);
+     align-self: flex-start;
 }
 
 .tomorrow {
@@ -321,6 +325,9 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     margin: 10px;
+    word-break: break-all;
+    gap: 10px;
+    flex-direction: column;
 }
 
 .todo-tomorrow:hover {
@@ -332,6 +339,7 @@ body {
     font-size: 1.4rem;
     margin: 0;
     color: var(--main-text-color);
+    align-self: flex-start;
 }
 
 .delete-btn {
@@ -343,6 +351,7 @@ body {
     border-radius: 5px;
     cursor: pointer;
     transition: background;
+    align-self: flex-start;
 }
 
 .delete-btn:hover {
