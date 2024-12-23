@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindFlow - Notes</title>
+    <link rel="stylesheet" href="/css/notes.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-wrapper">
+            <div class="header-container">
+                <a href="notes.html" class="logo">
+                    <h1>MindFlow</h1>
+                </a>
+                <nav class="nav">
+                    <a href="notes.html" class="nav-link-active">Notes</a>
+                    <a href="todo.html" class="nav-link">Todo</a>
+                </nav>
+                <div class="user-info">
+                    <img src="/images/manIcon.svg" alt="User Icon" class="user-icon">
+                    <span class="username">Иван Иванов</span>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <main class="main">
+        <div class="main-wrapper">
+            <div class="main-container">
+                <div class="main-title">
+                    <h2>Notes</h2>
+                    <p>Оставьте свои мысли и идеи ниже:</p>
+                </div>
+                <div class="notes-section">
+                    <textarea id="autoResizeTextarea" rows="4" cols="50" class="note-input" placeholder="Напишите свою заметку..."></textarea>
+                    <button class="save-btn">Сохранить</button>
+                </div>
+                <div class="notes-display">
+                    <h3>Ваши заметки:</h3>
+                    <div class="note">
+                        <div class="note-container">
+                            <p>Пример заметки</p>
+                            <button class="delete-btn">Удалить</button>
+                        </div>
+                        <span class="note-time">11.12.2024 17:28</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        © 2024 MindFlow. Все права защищены.
+    </footer>
+
+    <script src="JavaScript/todo.js"></script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindFlow - Todo</title>
+    <link rel="stylesheet" href="/css/todo.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-wrapper">
+            <div class="header-container">
+                <div class="logo">
+                    <a href="notes.html"><h1>MindFlow</h1></a>
+                </div>
+                <nav class="nav">
+                    <a href="notes.html" class="nav-link">Notes</a>
+                    <a href="todo.html" class="nav-link active">Todo</a>
+                </nav>
+                <div class="user-info">
+                    <img src="/images/manIcon.svg" alt="User Icon" class="user-icon">
+                    <span class="username">Иван Иванов</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="main-wrapper">
+            <div class="main-container">
+                <div class="main-title">
+                    <h2>Todo</h2>
+                    <p>Запланируйте что-нибудь:</p>
+                </div>
+                <div class="todo-section">
+                    <textarea id="autoResizeTextarea" rows="4" cols="50" class="todo-input" placeholder="Напишите свои планы..."></textarea>
+                    <div class="buttons">
+                        <input class="data-btn" type="datetime-local" placeholder="Выберите дату"></input>
+                        <button class="save-btn">Сохранить</button>
+                    </div>
+                </div>
+                <div class="todo-display">
+                    <h3>Ваши планы:</h3>
+                    <div class="todo-date">
+                        <div class="today">
+                            <p class="todo-date-text">Сегодня:</p>
+                            <div class="todo-today">
+                                <p>Пример</p>
+                                <button class="delete-btn">Удалить</button>
+                            </div>
+                        </div>
+                        <div class="tomorrow">
+                            <p class="todo-date-text">Завтра:</p>
+                            <div class="todo-tomorrow">
+                                <p>Пример</p>
+                                <button class="delete-btn">Удалить</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        © 2024 MindFlow. Все права защищены.
+    </footer>
+
+    <script src="JavaScript/todo.js"></script>
+</body>
+</html>
