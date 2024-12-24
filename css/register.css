@@ -101,7 +101,7 @@ input {
 }
 
 .register-btn {
-    background: var(--gradient-btn);
+    background: var(--second-color);
     color: var(--second-text-color);
     font-size: 1.8rem;
     padding: 10px 20px;
@@ -109,11 +109,6 @@ input {
     border-radius: 5px;
     cursor: pointer;
     transition: all 0.3s ease;
-}
-
-.register-btn a {
-    text-decoration: none;
-    color: var(--second-text-color);
 }
 
 .register-btn:hover {

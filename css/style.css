@@ -122,12 +122,11 @@ body {
 
 .login-button,
 .register-button {
-    font-family: var(--main-font-family);
-    color: var(--main-text-color);
+    color: var(--second-text-color);
     font-size: 1.6rem;
     font-weight: 400;
     line-height: 18px;
-    background: var(--gradient-btn);
+    background: var(--second-color);
     border-radius: 30px;
     padding: 11px 16px;
     border: none;

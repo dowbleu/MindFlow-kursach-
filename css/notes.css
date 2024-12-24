@@ -216,7 +216,7 @@ body {
 }
 
 .save-btn {
-    background: var(--gradient-btn);
+    background: var(--second-color);
     color: var(--second-text-color);
     border: none;
     padding: 1rem 2rem;
