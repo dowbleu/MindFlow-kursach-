@@ -17,13 +17,13 @@
 }
 
 * {
-    margin: 0 auto;
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 :root {
-    font-size: 62.5%;
+    font-size: 62.5%; /* 1rem = 10px */
     --main-font-family: "EncodeSansSC";
     --main-text-color: #000000;
     --second-text-color: #FFFFFF;
@@ -34,7 +34,6 @@
     --fifth-color: #F6FFF8;
     --gradient-bg: linear-gradient(135deg, #EAF4F4, #CCE3DE, #A4C3B2);
     --gradient-btn: linear-gradient(90deg, #6B9080, #A4C3B2);
-    --gradient-hover: linear-gradient(90deg, #F6FFF8, #6B9080);
 }
 
 body {
@@ -47,18 +46,6 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-}
-
-.header-wrapper {
-    margin: 0 auto;
-    padding: 50px 60px 40px 60px;
-}
-
-.header-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    animation: fade-in 1s ease;
 }
 
 @keyframes fade-in {
@@ -74,10 +61,10 @@ body {
 
 .main {
     flex: 1;
-}
-
-.site-title {
-    display: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .logo {
@@ -94,7 +81,7 @@ body {
 }
 
 .logo h1 {
-    font-size: 2.4rem;
+    font-size: 2.8rem;
     color: var(--main-text-color);
 }
 
@@ -116,13 +103,15 @@ body {
     color: var(--main-text-color);
     font-size: 1.4rem;
     font-weight: 400;
-    line-height: 13px;
+    line-height: 1.6;
     text-align: center;
+    max-width: 700px;
 }
 
 .login {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 5px;
 }
 
@@ -131,17 +120,25 @@ body {
     height: 45px;
 }
 
-.login-button {
+.login-button,
+.register-button {
     font-family: var(--main-font-family);
     color: var(--main-text-color);
     font-size: 1.6rem;
     font-weight: 400;
     line-height: 18px;
-    background: var(--first-color);
+    background: var(--gradient-btn);
     border-radius: 30px;
     padding: 11px 16px;
     border: none;
     text-decoration: none;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.login-button:hover,
+.register-button:hover {
+    transform: scale(1.05);
 }
 
 .screenshots-wrapper {
@@ -151,7 +148,7 @@ body {
 
 .screenshots-container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     gap: 22px;
 }
 
@@ -167,24 +164,25 @@ body {
     font-weight: 400;
     letter-spacing: 1.9px;
     line-height: 18px;
+    margin-bottom: 10px;
 }
 
 .notes-screenshot-img, .todo-screenshot-img {
-    width: 130px;
+    width: 100%;
     height: 150px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
+    position: relative;
     background: var(--gradient-btn);
     color: var(--second-text-color);
     text-align: center;
     padding: 1rem;
     font-size: 1.4rem;
     box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
 }
 
 .footer-wrapper {
@@ -195,7 +193,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: var(--second-color);
 }
 
 .footer-law-text {
@@ -205,5 +202,65 @@ body {
     font-size: 1rem;
     line-height: 11px;
     font-weight: 400;
-    padding: 9px 116px;
+    padding: 9px;
+}
+
+@media (min-width: 1024px) {
+    .main {
+        flex-direction: column;
+        gap: 100px;
+        align-items: center;
+        padding: 80px 50px;
+    }
+
+    .description-wrapper {
+        max-width: 700px;
+        padding: 0 30px;
+    }
+
+    .description-container {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .logo h1 {
+        font-size: 4rem;
+    }
+
+    .description-text {
+        font-size: 1.6rem;
+        max-width: 600px;
+    }
+
+    .login {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .screenshots-wrapper {
+        display: flex;
+        justify-content: center;
+    }
+
+    .screenshots-container {
+        gap: 40px;
+        flex-direction: column;
+    }
+
+    .notes-screenshot-title, .todo-screenshot-title {
+        font-size: 2rem;
+    }
+
+    .notes-screenshot-img, .todo-screenshot-img {
+        width: 100%;
+        height: auto;
+    }
+
+    .footer {
+        position: relative;
+        background: var(--gradient-btn);
+        color: var(--second-text-color);
+        text-align: center;
+        padding: 1.5rem;
+    }
 }

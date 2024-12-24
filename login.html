@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вход</title>
+    <link rel="stylesheet" href="/css/login.css">
+    <link type="image/x-icon" rel="shortcut icon" href="/images/MindFlow-icon.ico">
+</head>
+<body>
+    <h1 class="main-title"><a href="/index.html">MindFlow</a></h1>
+    <div class="form-container">
+        <h2 class="login-title">Вход</h2>
+        <form action="/login" method="POST">
+            <div class="input-group">
+                <label for="username">Имя пользователя:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Пароль:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button class="login-btn" type="submit"><a href="notes.html">Войти</a></button>
+        </form>
+        <div class="login-register">
+            <p>Нет аккаунта?</p>
+            <a href="register.html">Зарегистрироваться</a>
+        </div>
+    </div>
+</body>
+</html>
