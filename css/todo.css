@@ -343,6 +343,8 @@ body {
 }
 
 .todo-label {
+    display: flex;
+    gap: 5px;
     font-size: 1.4rem;
     margin: 0;
     align-self: flex-start;
